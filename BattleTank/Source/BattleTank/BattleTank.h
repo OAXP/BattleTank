@@ -5,4 +5,5 @@
 #include "CoreMinimal.h"
 #include "Engine/World.h"
 #include "GameFramework/PlayerController.h"
+#include "Engine/StaticMesh.h"
 
