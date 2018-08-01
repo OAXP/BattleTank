@@ -1,4 +1,4 @@
-// Fill out your copyright notice in he Description page of Project Settings.
+// Copyright OAXP Ltd.
 
 #include "Tank.h"
 #include "TankAimingComponent.h"
