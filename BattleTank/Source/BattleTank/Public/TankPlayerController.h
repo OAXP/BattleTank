@@ -20,16 +20,25 @@ public:
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaTime) override;
 
+protected:
+	UFUNCTION(BlueprintCallable, Category = "Setup")
+		ATank* GetControlledTank() const;
+
 private:
-	ATank* GetControlledTank() const;
 	void AimTowardsCrosshair();
+
 	bool GetSightRayHitLocation(FVector& OutHitLocation) const;
+
 	UPROPERTY(EditDefaultsOnly)
 		float CrossHairXLocation = 0.5;
+
 	UPROPERTY(EditDefaultsOnly)
 		float CrossHairYLocation = 0.3;
+
 	UPROPERTY(EditDefaultsOnly)
 		float LineTraceRange = 1000000.;
+
 	bool GetLookDirection(FVector2D ScreenLocation, FVector& LookDirection) const;
+
 	bool GetLookVectorHitLocation(FVector LookDirection, FVector& HitLocation) const;
 };
