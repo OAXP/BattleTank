@@ -1,7 +1,6 @@
 // Copyright OAXP Ltd.
 
 #include "Tank.h"
-#include "TankAimingComponent.h"
 #include "TankProjectile.h"
 #include "TankBarrel.h"
 
@@ -20,13 +19,6 @@ void ATank::BeginPlay()
 	Super::BeginPlay();
 
 
-	TankAimingComponent = FindComponentByClass<UTankAimingComponent>();
-}
-
-void ATank::AimAt(FVector HitLocation)
-{
-	if (!ensure(TankAimingComponent)) { return; }
-	TankAimingComponent->AimAt(HitLocation, LaunchSpeed);
 }
 
 void ATank::Fire()
